@@ -62,4 +62,3 @@ env kimi istifade olunur yalniz sifrelenmis formada:
 # k apply- f helloworld-secrets-volumes.yml  --  helloworld-deployment adinda deploymet yaradiriq ve ENV kimi secretden istifade edirik. Burada /etc/creds direktoriyasinda lazim olan username ve parolu elde etmek olar
 
 kubernetes-course/wordpress proyektinde secrete aid misal verilib. Wordpress qurularken istifade olunan WORDPRESS_DB_PASSWORD, WORDPRESS_DB_HOST, MYSQL_ROOT_PASSWORD ENV-lar secret faylinda istifade olunaraq qurulub
-
