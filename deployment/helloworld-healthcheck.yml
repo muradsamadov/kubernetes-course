@@ -22,5 +22,7 @@ spec:
           httpGet:
             path: /
             port: nodejs-port
-          initialDelaySeconds: 15
-          timeoutSeconds: 30
+          initialDelaySeconds: 15  # 15 saniye gozledikden sonra ilk defe isleme
+          timeoutSeconds: 30  # 30 saniyede cavab gelmezse timeout-a dus
+          periodSeconds: 5  # her 5 saniyeden bir kontrol et
+          failureThreshold: 1  # 1 defe fail olmaga icaze ver , daha cox olarsa podu fail et

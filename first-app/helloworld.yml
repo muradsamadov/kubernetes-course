@@ -10,4 +10,4 @@ spec:
     image: wardviaene/k8s-demo
     ports:
     - name: nodejs-port
-      containerPort: 3000
+      containerPort: 3000  # containerPort o demekdirki container daxilinde 3000 portu altinda up olur
