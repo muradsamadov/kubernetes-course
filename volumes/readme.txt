@@ -1,4 +1,5 @@
 StorageClass
+https://www.youtube.com/watch?v=DF3v2P8ENEg 
 
 deployment.yml faylinda storageclassin islemesi ucun lazim olan konfigler var, sadece oaraq deyisiklik olunacaq yerler nf-server ve nfs-path-dir, asagidaki kimi:
           env:
