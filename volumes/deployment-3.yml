@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd
+  labels:
+    app: httpd
+  # replace with namespace where provisioner is deployed
+  namespace: default
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: httpd
+  template:
+    metadata:
+      labels:
+        app: httpd
+    spec:
+      serviceAccountName: nfs-client-provisioner
+      containers:
+        - name: httpd
+          image: httpd
+          volumeMounts:
+            - name: nfs-client-root
+              mountPath: /usr/local/apache2/htdocs/
+          env:
+            - name: PROVISIONER_NAME
+              value: k8s-sigs.io/nfs-subdir-external-provisioner
+            - name: NFS_SERVER
+              value: 192.168.52.250
+            - name: NFS_PATH
+              value: /srv/nfs/kubedata/
+      volumes:
+        - name: nfs-client-root
+          nfs:
+            server: 192.168.52.250
+            path: /srv/nfs/kubedata/
