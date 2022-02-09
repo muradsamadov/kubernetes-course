@@ -17,7 +17,7 @@ Taints:             type=specialnode:NoSchedule
 Yuxaridaki iki misalda node-a taint teyin edirik ve asagidaki tolerations.yml faylini icra edirik:
 # k apply -f tolerations.yaml 
 
-Faylda da gorunduyu kimi iki deployment qeyd olunub ammaki muqayise ucun yalniz birinde toleration tetbiq edilib. Icra olunduqdan sonra tolerations-1 deploymenti yalniz  'k8s-node02' node-da calisacaqdir cunki ora taint teyin edilmeyib ammaki tolerations-2 her iki node uzerinde de calisacaqdir bu halda toleration tetbiq olunmusdur.
+Faylda da gorunduyu kimi iki deployment qeyd olunub ammaki muqayise ucun yalniz birinde toleration tetbiq edilib. Icra olunduqdan sonra tolerations-1 deploymenti yalniz  'k8s-node01' node-da calisacaqdir cunki ora taint teyin edilmeyib ammaki tolerations-2 her iki node uzerinde de calisacaqdir bu halda toleration tetbiq olunmusdur.
 
 Asagidaki komanda ile tainit node uzerinden delete etmek olur
 [root@k8s-master01 tolerations]# k taint  node  k8s-node02 type=specialnode:NoSchedule-
