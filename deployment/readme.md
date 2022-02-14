@@ -51,21 +51,23 @@ Bu  halda helloworld-deployment deploymenti up olacaqdir.
 
 ---
 
-Liveness and Readiness Probe
-
-# k apply -f helloworld-healthcheck.yml  -- helloworld-deployment deploymenti calisdiririq. Etrafli faylda qeyd olunub.
-
+# Liveness and Readiness Probe
+```
+$ k apply -f helloworld-healthcheck.yml  -- helloworld-deployment deploymenti calisdiririq. Etrafli faylda qeyd olunub.
+```
 Liveness odur ki, misalcun bizim misaldakinda poda http GET sorgusu gonderir eger ok-dursa pod Running olur. Eks halda podu restart edecek.
 Readiness-de ise pod yaranir ve podun islemeye hazir olub olmamagini bildirir. Bizim asagidaki misalda birinci liveness edir http GET cavabi qayidirsa sonra readiness edir. Eger bu haldada pod hemin GET-e cavab qayatrirsa demekki islemeye hazir veziyyetdedir:
-# k apply -f helloworld-liveness-readiness.yml
-
+```
+$ k apply -f helloworld-liveness-readiness.yml
+```
 ---
 
-Secrets
+# Secrets
 
 env kimi istifade olunur yalniz sifrelenmis formada:
-# k apply -f helloworld-secrets.yml  --  db-secrets adinda secret yaradiriq ve username ve parol teyin edirik, username ve parol base64 formatinda sifrelenmisdir
-# echo -n 'root' | base64  -- ile 'root' sozunu base64 formatinda sifreleyirik ve outputda verileni username kimi secret faylina elave edirik.
-# k apply- f helloworld-secrets-volumes.yml  --  helloworld-deployment adinda deploymet yaradiriq ve ENV kimi secretden istifade edirik. Burada /etc/creds direktoriyasinda lazim olan username ve parolu elde etmek olar
-
+```
+$ k apply -f helloworld-secrets.yml  --  db-secrets adinda secret yaradiriq ve username ve parol teyin edirik, username ve parol base64 formatinda sifrelenmisdir
+$ echo -n 'root' | base64  -- ile 'root' sozunu base64 formatinda sifreleyirik ve outputda verileni username kimi secret faylina elave edirik.
+$ k apply- f helloworld-secrets-volumes.yml  --  helloworld-deployment adinda deploymet yaradiriq ve ENV kimi secretden istifade edirik. Burada /etc/creds direktoriyasinda lazim olan username ve parolu elde etmek olar
+```
 kubernetes-course/wordpress proyektinde secrete aid misal verilib. Wordpress qurularken istifade olunan WORDPRESS_DB_PASSWORD, WORDPRESS_DB_HOST, MYSQL_ROOT_PASSWORD ENV-lar secret faylinda istifade olunaraq qurulub
