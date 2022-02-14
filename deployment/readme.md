@@ -24,6 +24,7 @@ REVISION  CHANGE-CAUSE
 En sonuncu reqem hal-hazirda calisan deploymenin revision nomresidir, yeniki "2". Asagidaki komanda ile revision nomresi "1" olan veziyyete qayitmaq olar. Ola bilerki deploymentde nese bug var, bu halda rahat evvelki versiyaya qayitmaq olar:
 ```
 [root@k8s-master01 ~]# k rollout undo deployment helloworld-deployment
+[root@k8s-master01 ~]# k rollout undo deployment helloworld-deployment --to-revision=1  --  ile istediyim revision nomreli deploymentde qayida bilerem
 ```
 ```
 $ k rollout history deployment helloworld-deployment  --revision=2  --  ile hemin rerevisionun veziyyetine daha detalli baxmaq olarki, hemin veziyyetde deployment nece idi, misalcun hansi image-den istifade edirdi ve s.
