@@ -1,11 +1,11 @@
 # Deployment
-
+```
 $ k apply -f helloworld.yml  -- helloworld-deployment adinda deployment yaradiriq
 
 $ k rollout status deployment helloworld-deployment  --  helloworld-deployment deploymentin statusna baxiriq ki, pod deploy oldu ya yox
 
 $ k rollout history deployment helloworld-deployment  -- helloworld-deployment deploymentin revision nomrelerine yeniki hal-hazirda hansi veziyyetde deploy olunub ona baxa bilirik. Ne vaxtsa rollout undo etsek yenede buradan baxa bilirik. Misalcun asagidaki kimi:
-
+```
 Hal-hazirda app 1 defe deploy edilib:
 $ [root@k8s-master01 ~]# k rollout history deployment helloworld-deployment
 deployment.apps/helloworld-deployment
