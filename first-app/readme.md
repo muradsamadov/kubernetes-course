@@ -17,4 +17,11 @@ Hello World!
 
 ---
 
-salam
+# restartPolicy
+
+3 dene restartPolicy novu movcuddur ve bu faylda 'pod-lifecycle.yml' qeyd edecem:
+```
+restartPolicy: Always  --  yeniki pod ne vaxt ki isini bitirir hemise restart getsin
+restartPolicy: Never  --  pod isini tamamlayandan sonra hec vaxt restart getmesin
+restartPolicy: OnFailure  --  pod yaranan zaman fail oldug halda restart getsin, yeniki pod normal running olarsa ve isini bitirerse restart getmesin
+```
