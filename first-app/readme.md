@@ -30,3 +30,8 @@ restartPolicy: OnFailure  --  pod yaranan zaman fail oldug halda restart getsin,
 # Pod Multicontainer
 
 Best-practise-de pod-multiconainer istifade edilmir. Yalniz o zaman istifade edilirki her podun monitorinqi ola bilerki (mes: fluentd) bu halda istifade oluna biler. pod-multicontainer.yml faylinda qeyd olunubki sidecarcontainer containeri publikden kodu cekir ve webcontainer containerinde ise calisdirir. Qeyd edimki pod-multiconainerde ipler ve volume eyni olur, ve bir localhost daxilinde eyni containermis kimi calisirlar.
+---
+
+# Pod initcontainer
+
+Ola birlerki esas containerin calismamisdan qabaq hansisa proses ise dussun ve bu halda da initcontainer istifade olunur. Initcontainer oz isini gorub bitirir ve eger task success olarsa hemin esas container ise dusmus olur. init-container.yml fayldaki misalda ilk novbede initcontainer containeri ise dusur ve 'myservice' servisini tapana kimi nslookup edir. 'myservice' servisini gorenden sonra artiq appcontainer container yaranir
