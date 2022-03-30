@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: annotationpod
+  annotations:
+    owner: "Murad Samadov"
+    notification-mail: "murad@gmail.com"
+spec:
+  containers:
+  - name: annotationcontainer
+    image: quay.io/muradsamadov/nginx
+    ports:
+    - containerPort: 80  
