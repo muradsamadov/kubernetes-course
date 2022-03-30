@@ -25,3 +25,8 @@ restartPolicy: Always  --  yeniki pod ne vaxt ki isini bitirir hemise restart ge
 restartPolicy: Never  --  pod isini tamamlayandan sonra hec vaxt restart getmesin
 restartPolicy: OnFailure  --  pod yaranan zaman fail oldug halda restart getsin, yeniki pod normal running olarsa ve isini bitirerse restart getmesin
 ```
+---
+
+# Pod Multicontainer
+
+Best-practise-de pod-multiconainer istifade edilmir. Yalniz o zaman istifade edilirki her podun monitorinqi ola bilerki (mes: fluentd) bu halda istifade oluna biler. pod-multicontainer.yml faylinda qeyd olunubki sidecarcontainer containeri publikden kodu cekir ve webcontainer containerinde ise calisdirir. Qeyd edimki pod-multiconainerde ipler ve volume eyni olur, ve bir localhost daxilinde eyni containermis kimi calisirlar.
