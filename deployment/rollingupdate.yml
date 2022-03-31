@@ -4,10 +4,10 @@ metadata:
   name: helloworld-deployment
 spec:
   replicas: 3
-  # strategy:
-  #   rollingUpdate:
-  #     maxSurge: 2
-  #     maxUnavailable: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 2
   selector:
     matchLabels:
       app: helloworld
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: container
-        image: httpd
+        image: quay.io/muradsamadov/nginx
         ports:
         - name: nginx-port
           containerPort: 80

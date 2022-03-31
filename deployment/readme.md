@@ -31,7 +31,7 @@ $ k rollout history deployment helloworld-deployment  --revision=2  --  ile hemi
 ```
 ---
 # Deployment Rollout and Rollback
-
+Misallarimizi rollingupdate.yml faylina esasen aparacayiq. Fayla esasen rollingUpdate deploymentinde qeyd olunan 'maxUnavailable' optionu-nun o demekdir ki, deployment update olunan zaman podlari ardicil 2-2 olaraq update etsin. 
 
 ---
 # NodeSelector
