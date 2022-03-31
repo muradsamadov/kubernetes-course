@@ -1,5 +1,4 @@
 # Deployment
-
 ```
 $ k apply -f helloworld.yml  -- helloworld-deployment adinda deployment yaradiriq
 
@@ -31,7 +30,6 @@ En sonuncu reqem hal-hazirda calisan deploymenin revision nomresidir, yeniki "2"
 $ k rollout history deployment helloworld-deployment  --revision=2  --  ile hemin rerevisionun veziyyetine daha detalli baxmaq olarki, hemin veziyyetde deployment nece idi, misalcun hansi image-den istifade edirdi ve s.
 ```
 ---
-
 # Deployment Rollout and Rollback
 
 
