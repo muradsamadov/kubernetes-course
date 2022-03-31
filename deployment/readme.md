@@ -1,4 +1,5 @@
 # Deployment
+
 ```
 $ k apply -f helloworld.yml  -- helloworld-deployment adinda deployment yaradiriq
 
@@ -31,6 +32,10 @@ $ k rollout history deployment helloworld-deployment  --revision=2  --  ile hemi
 ```
 ---
 
+# Deployment Rollout and Rollback
+
+
+---
 # NodeSelector
 ```
 $ k apply -f helloworld-nodeselector.yml  --  helloworld-deployment deployment run edirik ve nodeSelector optionu ile podun hansi node uzerinde run olmasini secirik. Bu halda lable-den istifade edirik. Bu halda nodun labeli bu olmalidir:
