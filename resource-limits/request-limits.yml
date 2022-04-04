@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: requestlimits
+  labels:
+    test: requestlimits
+spec:
+  containers:
+    - name: requestlimits
+      image: quay.io/muradsamadov/stress
+      resources:
+        requests:
+          memory: "64M"
+          cpu: "250m"
+        limits:
+          memory: "256M"
+          cpu: "0.5"
