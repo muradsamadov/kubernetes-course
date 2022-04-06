@@ -27,20 +27,20 @@ spec:
         app: mysql
     spec:
       containers:
-        - name: mysql
-          image: quay.io/muradsamadov/mysql
-          volumeMounts:
-            - name: mysqlvolume
-              mountPath: /var/lib/mysql
-          ports:
-            - containerPort: 3306
-          env:
-            - name: MYSQL_ROOT_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: mysqlsecret
-                  key: password
-      volumes:
+      - name: mysql
+        image: quay.io/muradsamadov/mysql
+        volumeMounts:
         - name: mysqlvolume
-          persistentVolumeClaim:
-            claimName: mysqlclaim
+          mountPath: /var/lib/mysql
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysqlsecret
+              key: password
+      volumes:
+      - name: mysqlvolume
+        persistentVolumeClaim:
+          claimName: pvc-1
