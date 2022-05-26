@@ -1,4 +1,4 @@
-Horizontal AutoScaling
+# Horizontal AutoScaling
 
 Menasi odurki ola bilirki layihenin yuklu olan vaxti olur, ve yaradilan replikanin sayini HorizontalPodAutoscaler ile avtomatik artirmaq olur.
 ```
