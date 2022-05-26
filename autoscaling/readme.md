@@ -1,7 +1,9 @@
 Horizontal AutoScaling
 
 Menasi odurki ola bilirki layihenin yuklu olan vaxti olur, ve yaradilan replikanin sayini HorizontalPodAutoscaler ile avtomatik artirmaq olur.
-# k apply -f hpa-example.yml  --  parametrlerinin detaillari faylda etrafli qeyd olunub
+```
+# k apply -f hpa-example.yml  #parametrlerinin detaillari faylda etrafli qeyd olunub
+```
 
 Asagida hal-hazirda gorunduyu kimi deployment 0% yukludur, gerek yuk 50%i kecsinki autoscaling olsun. Bu halda serverden bu deploymente dayanmadan requestler gonderek ve yuk altina salaq servisi:
 ```[root@k8s-master01 autoscaling]# k get horizontalpodautoscalers.autoscaling 
