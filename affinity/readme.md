@@ -39,5 +39,3 @@ env=dev butun node-lara teyin edilenden sonra node-affinity.yaml faylini icra ed
 # k label nodes k8s-node01 team=engineering-project1
 ```
 Yuxaridaki kimi etsem ve k8s-node02 de calisan hansisa podu delete etsem onda hemin pod k8s-node01 serveri uzerinde calisacaqdir cunki preferred olaraq team key-i bu node uzerindedir.
-```
-
