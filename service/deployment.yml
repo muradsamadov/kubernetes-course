@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: quay.io/muradsamadov/k8s:latest
+        image: quay.io/muradsamadov/pythonapp:v1
         ports:
-        - containerPort: 80
+        - containerPort: 5000
 ---
 apiVersion: apps/v1
 kind: Deployment

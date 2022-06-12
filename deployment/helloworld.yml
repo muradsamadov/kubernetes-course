@@ -13,7 +13,7 @@ spec:
         app: helloworld
     spec:
       containers:
-      - name: k8s-demo
-        image: quay.io/muradsamadov/nginx
+      - name: pythonapps
+        image: quay.io/muradsamadov/pythonapp:v1
         ports:
-        - containerPort: 80
+        - containerPort: 5000

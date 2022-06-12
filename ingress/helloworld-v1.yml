@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
       - name: k8s-demo
-        image: wardviaene/k8s-demo:latest
+        image: quay.io/muradsamadov/pythonapp:v1
         ports:
         - name: nodejs-port
-          containerPort: 3000
+          containerPort: 5000
 ---
 apiVersion: v1
 kind: Service
@@ -28,7 +28,7 @@ spec:
   ports:
   - port: 80
     nodePort: 30303
-    targetPort: 3000
+    targetPort: 5000
     protocol: TCP
     name: http
   selector:

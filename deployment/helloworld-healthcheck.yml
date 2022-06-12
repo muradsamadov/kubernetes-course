@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
       - name: k8s-demo
-        image: wardviaene/k8s-demo
+        image: quay.io/muradsamadov/pythonapp:v1
         ports:
-        - name: nodejs-port
-          containerPort: 3000
+        - name: flask-port
+          containerPort: 5000
         livenessProbe:
           httpGet:
             path: /
-            port: nodejs-port
+            port: flask-port
           initialDelaySeconds: 15  # 15 saniye gozledikden sonra ilk defe isleme
           timeoutSeconds: 30  # 30 saniyede cavab gelmezse timeout-a dus
           periodSeconds: 5  # her 5 saniyeden bir kontrol et

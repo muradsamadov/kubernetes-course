@@ -17,7 +17,7 @@ spec:
             name: helloworld-v1
             port:
               number: 80
-  - host: helloworld-v2.example.com
+  - host: helloworld-v2.xalqbank.az
     http:
       paths:
       - path: /
