@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: k8s-demo
-        image: wardviaene/k8s-demo
+        image: quay.io/muradsamadov/pythonapp:v1
         ports:
         - name: nodejs-port
-          containerPort: 3000
+          containerPort: 5000
